@@ -1,0 +1,174 @@
+/* VocabMaster - Popup Styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 380px;
+  max-height: 520px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 14px;
+  color: #333;
+  background: #fafafa;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 18px 12px;
+  background: linear-gradient(135deg, #5b6abf, #7c5cbf);
+  color: #fff;
+}
+
+.header h1 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.count {
+  font-size: 13px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 3px 10px;
+  border-radius: 12px;
+}
+
+.toolbar {
+  display: flex;
+  gap: 8px;
+  padding: 10px 14px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+#search {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+#search:focus {
+  border-color: #5b6abf;
+}
+
+#exportBtn {
+  padding: 8px 12px;
+  background: #5b6abf;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+#exportBtn:hover {
+  background: #4a58a8;
+}
+
+.word-list {
+  max-height: 390px;
+  overflow-y: auto;
+  padding: 4px 0;
+}
+
+.word-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 10px 14px;
+  border-bottom: 1px solid #f0f0f0;
+  background: #fff;
+  transition: background 0.15s;
+}
+
+.word-item:hover {
+  background: #f8f8ff;
+}
+
+.word-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.word-name {
+  font-weight: 600;
+  font-size: 15px;
+  color: #1a1a1a;
+}
+
+.word-phonetic {
+  font-size: 12px;
+  color: #999;
+  margin-left: 6px;
+}
+
+.word-def {
+  font-size: 12px;
+  color: #666;
+  margin-top: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.word-actions {
+  display: flex;
+  gap: 4px;
+  margin-left: 8px;
+  flex-shrink: 0;
+}
+
+.word-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  transition: background 0.15s;
+}
+
+.word-actions button:hover {
+  background: #f0f0f0;
+}
+
+.btn-delete:hover {
+  background: #ffe0e0 !important;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: #999;
+}
+
+.empty-state p {
+  margin-bottom: 6px;
+}
+
+.empty-state .hint {
+  font-size: 12px;
+  color: #bbb;
+}
+
+/* Scrollbar */
+.word-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.word-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.word-list::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 3px;
+}

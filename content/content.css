@@ -1,0 +1,161 @@
+/* VocabMaster - Content Styles */
+
+/* ─── Translation Popup ────────────────────────────────────────── */
+
+#vm-popup {
+  position: absolute;
+  z-index: 2147483647;
+  width: 340px;
+  max-height: 400px;
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+  display: block;
+  animation: vm-fadeIn 0.15s ease;
+}
+
+@keyframes vm-fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#vm-popup * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.vm-popup-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 14px 8px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.vm-word {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.vm-phonetic {
+  font-size: 13px;
+  color: #888;
+  flex: 1;
+}
+
+.vm-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px;
+  border-radius: 4px;
+  line-height: 1;
+  transition: background 0.15s;
+}
+
+.vm-btn:hover {
+  background: #f0f0f0;
+}
+
+.vm-btn-close {
+  font-size: 18px;
+  color: #999;
+}
+
+.vm-btn-star.vm-starred {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+.vm-btn-star:not(.vm-starred) {
+  filter: grayscale(1);
+  opacity: 0.5;
+}
+
+.vm-popup-body {
+  padding: 10px 14px 14px;
+}
+
+.vm-loading {
+  color: #999;
+  font-size: 13px;
+  padding: 8px 0;
+}
+
+.vm-error {
+  color: #c0392b;
+  font-size: 13px;
+  padding: 8px 0;
+}
+
+.vm-meaning {
+  margin-bottom: 8px;
+}
+
+.vm-meaning:last-child {
+  margin-bottom: 0;
+}
+
+.vm-pos {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  background: #5b6abf;
+  border-radius: 4px;
+  padding: 1px 8px;
+  margin-bottom: 4px;
+}
+
+.vm-def {
+  font-size: 13px;
+  color: #444;
+  padding-left: 4px;
+  margin: 3px 0;
+}
+
+.vm-def::before {
+  content: "• ";
+  color: #aaa;
+}
+
+/* ─── Vocab Word Highlighting ──────────────────────────────────── */
+
+.vm-highlight {
+  background: #fff3b0;
+  border-radius: 2px;
+  padding: 0 1px;
+  cursor: help;
+  transition: background 0.2s;
+}
+
+.vm-highlight:hover {
+  background: #ffe066;
+}
+
+/* ─── YouTube Subtitle Words ───────────────────────────────────── */
+
+.vm-yt-word {
+  cursor: pointer;
+  border-radius: 2px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.vm-yt-word:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.vm-yt-highlighted {
+  background: rgba(255, 235, 59, 0.45) !important;
+  border-radius: 2px;
+  padding: 0 1px;
+}

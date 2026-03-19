@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VocabMaster</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="header">
+    <h1>📖 VocabMaster</h1>
+    <span class="count" id="count">0 words</span>
+  </div>
+
+  <div class="toolbar">
+    <input type="text" id="search" placeholder="Search words..." autocomplete="off">
+    <button id="exportBtn" title="Export as CSV">📥 Export</button>
+  </div>
+
+  <div id="list" class="word-list"></div>
+
+  <div id="empty" class="empty-state" style="display:none">
+    <p>No words yet!</p>
+    <p class="hint">Select any English word on a webpage and click ⭐ to save it.</p>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
